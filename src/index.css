@@ -142,3 +142,29 @@ a {
   overflow: hidden;
   position: relative;
 }
+
+/* =========================
+   Shared page header
+========================= */
+
+.page-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: var(--text-body-large);
+}
+
+.page-header__back {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 28px;
+}
