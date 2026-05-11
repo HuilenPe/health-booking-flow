@@ -312,3 +312,43 @@
 
   gap: 12px;
 }
+
+/* =========================
+   Quick help suggestions
+========================= */
+
+.quickHelp {
+  margin-top: 20px;
+}
+
+.quickHelp p {
+  margin: 0 0 12px;
+
+  font-size: var(--text-caption);
+
+  color: var(--color-text-secondary);
+}
+
+.quickTags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.quickTags button {
+  min-height: 36px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px;
+
+  background: var(--color-neutral-0);
+
+  color: var(--color-primary-500);
+
+  font-size: var(--text-caption);
+
+  cursor: pointer;
+}

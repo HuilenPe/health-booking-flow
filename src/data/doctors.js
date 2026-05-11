@@ -35,4 +35,16 @@ export const doctors = [
     image: "https://i.pravatar.cc/120?img=49",
     nextSlot: "18:45",
   },
+  {
+  id: "4",
+  name: "Dra. Laura Méndez",
+  specialty: "Dermatóloga",
+  hospital: "Hospital Sant Joan",
+  city: "Barcelona",
+  rating: "4.8",
+  reviews: "89",
+  badge: "Alta demanda",
+  image: "https://i.pravatar.cc/120?img=24",
+  nextSlot: null,
+}
 ]

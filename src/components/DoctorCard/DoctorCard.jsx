@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom"
-import { FiChevronRight, FiMapPin, FiStar } from "react-icons/fi"
+import { Link } from "react-router-dom";
+import { FiChevronRight, FiMapPin, FiStar } from "react-icons/fi";
 
-/**
- * Reusable card for displaying a doctor result.
- * Used in the booking search flow.
- */
 function DoctorCard({ doctor }) {
   return (
     <article className="doctor-card">
@@ -33,15 +29,26 @@ function DoctorCard({ doctor }) {
 
       <div className="doctor-card__badge">{doctor.badge}</div>
 
-      <Link
-        to={`/reservar/horario/${doctor.id}`}
-        className="doctor-card__button"
-      >
-        Reservar {doctor.nextSlot}
-        <FiChevronRight />
-      </Link>
+      {doctor.nextSlot ? (
+        <Link
+          to={`/reservar/horario/${doctor.id}`}
+          className="doctor-card__button"
+        >
+          Reservar {doctor.nextSlot}
+          <FiChevronRight />
+        </Link>
+      ) : (
+        <button
+          className="
+      doctor-card__button
+      doctor-card__button--disabled
+    "
+        >
+          Sin horarios disponibles
+        </button>
+      )}
     </article>
-  )
+  );
 }
 
-export default DoctorCard
+export default DoctorCard;
