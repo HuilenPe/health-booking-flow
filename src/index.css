@@ -262,3 +262,48 @@ a {
   font-size: var(--text-caption);
   font-weight: 700;
 }
+
+/* =========================
+   Appointment summary
+========================= */
+
+.appointment-summary {
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+
+.appointment-summary__row {
+  display: flex;
+  gap: 14px;
+}
+
+.appointment-summary__row svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+  font-size: 20px;
+  color: var(--color-primary-500);
+}
+
+.appointment-summary__row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointment-summary__row strong {
+  font-size: var(--text-body-large);
+}
+
+.appointment-summary__row span {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}

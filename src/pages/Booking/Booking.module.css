@@ -267,60 +267,6 @@
   color: var(--color-text-secondary);
 }
 
-/* Summary card */
-
-.summaryCard {
-  width: 100%;
-
-  margin-top: 40px;
-
-  padding: 20px;
-
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-xl);
-
-  box-shadow: var(--shadow-card);
-
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  text-align: left;
-}
-
-.summaryRow {
-  display: flex;
-  gap: 14px;
-}
-
-.summaryRow svg {
-  margin-top: 2px;
-
-  flex-shrink: 0;
-
-  font-size: 20px;
-
-  color: var(--color-primary-500);
-}
-
-.summaryRow div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.summaryRow strong {
-  font-size: var(--text-body-large);
-}
-
-.summaryRow span {
-  font-size: var(--text-body);
-
-  color: var(--color-text-secondary);
-
-  line-height: 1.5;
-}
-
 /* Doctor section */
 
 .confirmDoctor {
