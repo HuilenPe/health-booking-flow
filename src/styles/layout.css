@@ -1,0 +1,22 @@
+/* =========================
+   App layout
+   This creates the mobile-first app frame.
+   The product was designed as mobile-first, so the base layout starts here.
+========================= */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 428px;
+  min-height: 100vh;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-app);
+  overflow: hidden;
+  position: relative;
+}
