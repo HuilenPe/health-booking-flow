@@ -1,0 +1,57 @@
+/* =========================
+   App layout
+========================= */
+
+.app-layout {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px 16px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(47, 98, 112, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(47, 98, 112, 0.12),
+      transparent 30%
+    ),
+    var(--color-bg-page);
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 428px;
+  min-height: 100vh;
+
+  background: var(--color-bg-card);
+
+  border-radius: var(--radius-app);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* =========================
+   Desktop adaptation
+========================= */
+
+@media (min-width: 1024px) {
+  .app-layout {
+    padding: 48px;
+  }
+
+  .app-shell {
+    min-height: 880px;
+
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.18);
+  }
+}

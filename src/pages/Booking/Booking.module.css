@@ -1,0 +1,354 @@
+.bookingScreen {
+  min-height: 100vh;
+  padding: 32px 16px 40px;
+  color: var(--color-text-primary);
+}
+
+/* Intro */
+
+.intro {
+  margin-top: 24px;
+}
+
+.intro h2 {
+  margin: 0;
+  font-size: var(--text-h3);
+}
+
+.intro p {
+  margin: 4px 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+/* Search */
+
+.searchRow {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.searchBox,
+.locationButton {
+  min-height: 48px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-0);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary-500);
+}
+
+.searchBox {
+  padding: 0 12px;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-primary);
+}
+
+.locationButton {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.locationButton span {
+  font-size: var(--text-body);
+  color: var(--color-text-primary);
+}
+
+/* Results */
+
+.resultsSection {
+  margin-top: 32px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: var(--text-body-large);
+}
+
+.sectionHeader p {
+  margin: 4px 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.doctorList {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =========================
+   Date and time screen
+========================= */
+
+.selectedDoctorCard {
+  margin-top: 32px;
+  padding: 16px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.selectedDoctorCard img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.selectedDoctorCard h2 {
+  margin: 0;
+  font-size: var(--text-body-large);
+}
+
+.selectedDoctorCard p {
+  margin: 4px 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.selectedDoctorCard span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-caption);
+  color: var(--color-primary-500);
+}
+
+.timeSection {
+  margin-top: 32px;
+}
+
+.timeSection h2 {
+  margin: 0;
+  font-size: var(--text-body-large);
+}
+
+.timeSection p {
+  margin: 4px 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.dateList {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.dateButton {
+  min-height: 72px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateButton span {
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.dateButton strong {
+  margin-top: 4px;
+  font-size: var(--text-h3);
+}
+
+.selectedDate {
+  border-color: var(--color-primary-500);
+  background: var(--color-primary-500);
+  color: var(--color-text-inverse);
+}
+
+.selectedDate span {
+  color: var(--color-text-inverse);
+}
+
+.slotGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.timeSlot {
+  min-height: 48px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-slot-bg);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.selectedSlot {
+  background: var(--color-slot-selected-bg);
+  color: var(--color-slot-selected-text);
+  border-color: var(--color-slot-selected-bg);
+}
+
+.primaryFullButton {
+  margin-top: 40px;
+  min-height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* =========================
+   Confirmation screen
+========================= */
+
+.confirmationScreen {
+  min-height: 100vh;
+
+  padding: 48px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.successIcon {
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-500);
+  color: var(--color-text-inverse);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 42px;
+}
+
+.confirmationHeader {
+  margin-top: 32px;
+}
+
+.confirmationHeader h1 {
+  margin: 0;
+
+  font-size: var(--text-h1);
+
+  color: var(--color-primary-500);
+}
+
+.confirmationHeader p {
+  margin: 12px 0 0;
+
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+}
+
+/* Doctor section */
+
+.confirmDoctor {
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.confirmDoctor img {
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.confirmDoctor h2 {
+  margin: 0;
+
+  font-size: var(--text-h3);
+}
+
+.confirmDoctor p {
+  margin: 4px 0 0;
+
+  color: var(--color-text-secondary);
+}
+
+/* Actions */
+
+.confirmationActions {
+  width: 100%;
+
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================
+   Quick help suggestions
+========================= */
+
+.quickHelp {
+  margin-top: 20px;
+}
+
+.quickHelp p {
+  margin: 0 0 12px;
+
+  font-size: var(--text-caption);
+
+  color: var(--color-text-secondary);
+}
+
+.quickTags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.quickTags button {
+  min-height: 36px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px;
+
+  background: var(--color-neutral-0);
+
+  color: var(--color-primary-500);
+
+  font-size: var(--text-caption);
+
+  cursor: pointer;
+}

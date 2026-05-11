@@ -1,0 +1,274 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 72px 16px 96px;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-primary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  color: var(--color-primary-500);
+}
+
+.date {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.profile {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.settingsButton {
+  position: absolute;
+  right: -6px;
+  bottom: -4px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-neutral-0);
+  box-shadow: var(--shadow-floating);
+  color: var(--color-text-primary);
+  display: grid;
+  place-items: center;
+}
+
+.expressSection {
+  margin-top: 32px;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--text-caption);
+  color: var(--color-primary-500);
+}
+
+.sectionLabel small {
+  color: var(--color-text-secondary);
+}
+
+.expressCard {
+  margin-top: var(--space-12);
+  padding: 14px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 52px 1fr auto auto;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.expressCard img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.expressInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-caption);
+}
+
+.expressInfo strong {
+  font-size: var(--text-body);
+}
+
+.expressInfo span {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+.expressInfo b {
+  margin-top: 2px;
+  font-size: var(--text-caption);
+}
+
+.expressTime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: var(--text-caption);
+}
+
+.chevron {
+  color: var(--color-text-secondary);
+}
+
+.expressButton {
+  grid-column: 1 / -1;
+  margin-top: var(--space-8);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  text-align: center;
+  font-size: var(--text-caption);
+  font-weight: 700;
+}
+
+.newAppointment {
+  margin-top: 36px;
+  min-height: 72px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-text-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.newAppointmentIcon {
+  position: relative;
+  color: var(--color-primary-500);
+  font-size: 32px;
+}
+
+.plusIcon {
+  position: absolute;
+  right: -8px;
+  bottom: -4px;
+  font-size: 18px;
+  background: var(--color-neutral-0);
+}
+
+.newAppointment span {
+  flex: 1;
+  font-size: var(--text-body);
+  font-weight: 600;
+}
+
+.helperText,
+.repeatText {
+  margin: var(--space-8) 0 0;
+  font-size: var(--text-caption);
+  color: var(--color-text-secondary);
+}
+
+.upcomingSection {
+  margin-top: 32px;
+}
+
+.upcomingSection h2 {
+  margin: 0 0 var(--space-12);
+  font-size: var(--text-body-large);
+}
+
+.upcomingCard {
+  padding: 16px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  gap: var(--space-12);
+}
+
+.clockIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+  color: var(--color-text-inverse);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+
+.upcomingContent {
+  min-width: 0;
+  flex: 1;
+}
+
+.upcomingContent h3 {
+  margin: 0 0 var(--space-8);
+  font-size: var(--text-body-large);
+}
+
+.location {
+  display: flex;
+  gap: var(--space-8);
+  color: var(--color-primary-500);
+  font-size: var(--text-caption);
+}
+
+.location div {
+  display: flex;
+  flex-direction: column;
+}
+
+.location span {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
+.doctorRow {
+  margin-top: var(--space-12);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--text-body);
+}
+
+.doctorRow img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.doctorRow small {
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+
+.actions button {
+  padding: 9px 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--color-neutral-0);
+  color: var(--color-primary-500);
+}
+
+.cancelButton {
+  color: var(--color-danger) !important;
+}
+
+.repeatText button {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+}
