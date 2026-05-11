@@ -1,31 +1,44 @@
-import { Link } from "react-router-dom"
-import { FiCalendar, FiChevronRight, FiClock, FiMapPin, FiPlusCircle, FiSettings, FiZap } from "react-icons/fi"
-import { FaHome, FaHeart, FaCommentAlt, FaCalendarAlt } from "react-icons/fa"
+import { Link } from "react-router-dom";
+import {
+  FiCalendar,
+  FiChevronRight,
+  FiClock,
+  FiMapPin,
+  FiPlusCircle,
+  FiSettings,
+  FiZap,
+} from "react-icons/fi";
 
-import AppLayout from "../../components/Layout/AppLayout"
-import styles from "./Dashboard.module.css"
-import BottomNav from "../../components/BottomNav/BottomNav"
+import AppLayout from "../../components/Layout/AppLayout";
+import BottomNav from "../../components/BottomNav/BottomNav";
+import {
+  expressAppointment,
+  upcomingAppointment,
+  user,
+} from "../../data/dashboard";
+import styles from "./Dashboard.module.css";
 
 function Dashboard() {
   return (
     <AppLayout>
       <section className={styles.dashboard}>
-        {/* Header principal del usuario */}
         <header className={styles.header}>
           <div>
-            <h1 className={styles.title}>¡Buenos días, María José!</h1>
+            <h1 className={styles.title}>¡Buenos días, {user.name}!</h1>
             <p className={styles.date}>Lunes 12 de Diciembre 2026 · 11:36 AM</p>
           </div>
 
           <div className={styles.profile}>
-            <img src="https://i.pravatar.cc/100?img=47" alt="María José" />
-            <button className={styles.settingsButton} aria-label="Abrir configuración">
+            <img src={user.avatar} alt={user.name} />
+            <button
+              className={styles.settingsButton}
+              aria-label="Abrir configuración"
+            >
               <FiSettings />
             </button>
           </div>
         </header>
 
-        {/* Cita rápida */}
         <section className={styles.expressSection}>
           <div className={styles.sectionLabel}>
             <FiZap />
@@ -34,17 +47,20 @@ function Dashboard() {
           </div>
 
           <article className={styles.expressCard}>
-            <img src="https://i.pravatar.cc/120?img=32" alt="Dr. Juan Ambrosio" />
+            <img
+              src={expressAppointment.image}
+              alt={expressAppointment.doctor}
+            />
 
             <div className={styles.expressInfo}>
-              <strong>Dr. Juan Ambrosio</strong>
-              <span>Médico de familia</span>
-              <b>Hospital Clinic</b>
+              <strong>{expressAppointment.doctor}</strong>
+              <span>{expressAppointment.specialty}</span>
+              <b>{expressAppointment.hospital}</b>
             </div>
 
             <div className={styles.expressTime}>
               <span>Hoy</span>
-              <strong>16:00</strong>
+              <strong>{expressAppointment.time}</strong>
             </div>
 
             <FiChevronRight className={styles.chevron} />
@@ -55,7 +71,6 @@ function Dashboard() {
           </article>
         </section>
 
-        {/* CTA principal */}
         <Link to="/reservar" className={styles.newAppointment}>
           <div className={styles.newAppointmentIcon}>
             <FiCalendar />
@@ -68,7 +83,6 @@ function Dashboard() {
 
         <p className={styles.helperText}>Te tomará menos de 1 minuto</p>
 
-        {/* Próxima cita */}
         <section className={styles.upcomingSection}>
           <h2>Próxima cita</h2>
 
@@ -78,20 +92,23 @@ function Dashboard() {
             </div>
 
             <div className={styles.upcomingContent}>
-              <h3>Martes 20 Diciembre · 11:45 am</h3>
+              <h3>{upcomingAppointment.date}</h3>
 
               <div className={styles.location}>
                 <FiMapPin />
                 <div>
-                  <strong>Hospital Clinic</strong>
-                  <span>Carrer de Villarroel, 170, 08036 Barcelona</span>
+                  <strong>{upcomingAppointment.hospital}</strong>
+                  <span>{upcomingAppointment.address}</span>
                 </div>
               </div>
 
               <div className={styles.doctorRow}>
-                <img src="https://i.pravatar.cc/80?img=44" alt="Dra. Yanina Crespo" />
-                <span>Dra. Yanina Crespo</span>
-                <small>Cardióloga</small>
+                <img
+                  src={upcomingAppointment.image}
+                  alt={upcomingAppointment.doctor}
+                />
+                <span>{upcomingAppointment.doctor}</span>
+                <small>{upcomingAppointment.specialty}</small>
               </div>
 
               <div className={styles.actions}>
@@ -106,11 +123,10 @@ function Dashboard() {
           </p>
         </section>
 
-        {/* Navegación inferior */}
         <BottomNav />
       </section>
     </AppLayout>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
