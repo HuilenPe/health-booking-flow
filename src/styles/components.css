@@ -190,3 +190,46 @@
   background: var(--color-neutral-0);
   color: var(--color-primary-500);
 }
+
+/* =========================
+   Bottom navigation
+========================= */
+
+.bottom-nav {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 64px;
+
+  background: var(--color-primary-700);
+  color: var(--color-text-inverse);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-radius: 0 0 var(--radius-app) var(--radius-app);
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  font-size: 11px;
+
+  opacity: 0.85;
+}
+
+.bottom-nav__item svg {
+  font-size: 22px;
+}
+
+.bottom-nav__item--active {
+  opacity: 1;
+}

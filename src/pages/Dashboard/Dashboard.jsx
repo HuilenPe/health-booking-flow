@@ -4,6 +4,7 @@ import { FaHome, FaHeart, FaCommentAlt, FaCalendarAlt } from "react-icons/fa"
 
 import AppLayout from "../../components/Layout/AppLayout"
 import styles from "./Dashboard.module.css"
+import BottomNav from "../../components/BottomNav/BottomNav"
 
 function Dashboard() {
   return (
@@ -106,24 +107,7 @@ function Dashboard() {
         </section>
 
         {/* Navegación inferior */}
-        <nav className={styles.bottomNav} aria-label="Navegación principal">
-          <a className={styles.active}>
-            <FaHome />
-            <span>Inicio</span>
-          </a>
-          <a>
-            <FaHeart />
-            <span>Mi salud</span>
-          </a>
-          <a>
-            <FaCommentAlt />
-            <span>Mensajes</span>
-          </a>
-          <a>
-            <FaCalendarAlt />
-            <span>Agenda</span>
-          </a>
-        </nav>
+        <BottomNav />
       </section>
     </AppLayout>
   )

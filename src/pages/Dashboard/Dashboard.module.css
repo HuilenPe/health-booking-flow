@@ -272,34 +272,3 @@
   color: inherit;
   text-decoration: underline;
 }
-
-.bottomNav {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 64px;
-  background: var(--color-primary-700);
-  color: var(--color-text-inverse);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-radius: 0 0 var(--radius-app) var(--radius-app);
-}
-
-.bottomNav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  font-size: 11px;
-  opacity: 0.85;
-}
-
-.bottomNav svg {
-  font-size: 22px;
-}
-
-.bottomNav .active {
-  opacity: 1;
-}
