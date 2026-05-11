@@ -1,16 +1,18 @@
-import { Link } from "react-router-dom"
-import PageHeader from "../../components/PageHeader/PageHeader"
+import { FiMapPin, FiSearch } from "react-icons/fi";
 
-import AppLayout from "../../components/Layout/AppLayout"
-import { doctors } from "../../data/doctors"
-import styles from "./Booking.module.css"
+import AppLayout from "../../components/Layout/AppLayout";
+import PageHeader from "../../components/PageHeader/PageHeader";
+import DoctorCard from "../../components/DoctorCard/DoctorCard";
+
+import { doctors } from "../../data/doctors";
+import styles from "./Booking.module.css";
 
 function DoctorSearch() {
   return (
     <AppLayout>
       <section className={styles.bookingScreen}>
         {/* Header */}
-<PageHeader title="Reservar cita" backTo="/" />
+        <PageHeader title="Reservar cita" backTo="/" />
 
         {/* Intro */}
         <section className={styles.intro}>
@@ -40,46 +42,13 @@ function DoctorSearch() {
 
           <div className={styles.doctorList}>
             {doctors.map((doctor) => (
-              <article key={doctor.id} className={styles.doctorCard}>
-                <div className={styles.doctorCardTop}>
-                  <img src={doctor.image} alt={doctor.name} />
-
-                  <div className={styles.doctorMainInfo}>
-                    <h3>{doctor.name}</h3>
-                    <p>{doctor.specialty}</p>
-
-                    <div className={styles.hospital}>
-                      <FiMapPin />
-                      <span>
-                        {doctor.hospital} · {doctor.city}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className={styles.ratingBox}>
-                    <span>
-                      <FiStar /> {doctor.rating}
-                    </span>
-                    <small>({doctor.reviews})</small>
-                  </div>
-                </div>
-
-                <div className={styles.badge}>{doctor.badge}</div>
-
-                <Link
-                  to={`/reservar/horario/${doctor.id}`}
-                  className={styles.reserveButton}
-                >
-                  Reservar {doctor.nextSlot}
-                  <FiChevronRight />
-                </Link>
-              </article>
+              <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
           </div>
         </section>
       </section>
     </AppLayout>
-  )
+  );
 }
 
-export default DoctorSearch
+export default DoctorSearch;
