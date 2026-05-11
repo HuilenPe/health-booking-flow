@@ -312,20 +312,3 @@
 
   gap: 12px;
 }
-
-.secondaryButton {
-  min-height: 52px;
-
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-md);
-
-  background: var(--color-neutral-0);
-
-  color: var(--color-primary-500);
-
-  font-weight: 600;
-}
-
-.primaryFullButton svg {
-  font-size: 18px;
-}

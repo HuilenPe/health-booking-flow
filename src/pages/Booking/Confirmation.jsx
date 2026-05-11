@@ -5,6 +5,7 @@ import AppLayout from "../../components/Layout/AppLayout";
 import AppointmentSummary from "../../components/AppointmentSummary/AppointmentSummary";
 
 import styles from "./Booking.module.css";
+import Button from "../../components/Button/Button";
 
 function Confirmation() {
   return (
@@ -46,14 +47,11 @@ function Confirmation() {
         </section>
         {/* Actions */}
         <div className={styles.confirmationActions}>
-          <button className={styles.secondaryButton}>
-            Añadir al calendario
-          </button>
-
-          <Link to="/" className={styles.primaryFullButton}>
+          <Button variant="secondary">Añadir al calendario</Button>
+          <Button to="/">
             <FiHome />
             Volver al inicio
-          </Link>
+          </Button>
         </div>
       </section>
     </AppLayout>

@@ -307,3 +307,31 @@ a {
   color: var(--color-text-secondary);
   line-height: 1.5;
 }
+
+/* =========================
+   Button
+========================= */
+
+.button {
+  min-height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button--primary {
+  border: 0;
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+
+.button--secondary {
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-neutral-0);
+  color: var(--color-primary-500);
+}
